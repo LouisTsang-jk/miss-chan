@@ -37,6 +37,14 @@
           "placeholder": "Enter Chinese text to translate to English"
         }
       ]
+    },
+    {
+      "name": "settings",
+      "title": "settings",
+      "subtitle": "Configure API Key",
+      "description": "Configure the API key for accessing the Grok API",
+      "mode": "view",
+      "path": "src/settings.tsx"
     }
   ],
   "dependencies": {
@@ -59,5 +67,6 @@
     "lint": "ray lint",
     "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
     "publish": "npx @raycast/api@latest publish"
-  }
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }

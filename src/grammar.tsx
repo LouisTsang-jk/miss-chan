@@ -1,10 +1,10 @@
-import { queryOllama } from "./utils";
+import { queryOllama, queryGrok } from "./utils";
 import { showToast, Toast, ActionPanel, Form, Action } from "@raycast/api";
 import { useState, useEffect } from "react";
 
 async function grammarCheck(text: string): Promise<string> {
   const prompt = `Check the following English text for grammar errors. If there are errors, explain the incorrect parts and the corrected version in Chinese, and then provide the corrected version of the text(english):\n\n${text}`;
-  return await queryOllama(prompt);
+  return await queryGrok(prompt);
 }
 
 export default function Command(props: { arguments: { text?: string } }) {

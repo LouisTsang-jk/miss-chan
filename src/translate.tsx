@@ -1,10 +1,10 @@
-import { queryOllama } from "./utils";
+import { queryGrok } from "./utils";
 import { showToast, Toast, ActionPanel, Form, Action } from "@raycast/api";
 import { useState, useEffect } from "react";
 
 async function translateToEnglish(text: string): Promise<string> {
   const prompt = `Translate the following Chinese text to English:\n\n${text}`;
-  return await queryOllama(prompt);
+  return await queryGrok(prompt);
 }
 
 export default function Command(props: { arguments: { text?: string } }) {
